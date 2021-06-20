@@ -1,0 +1,17 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>Pool Temps</title>
+</head>
+<body>
+<form>
+<FONT FACE="Tahoma" Color="#0A4CDB"Size=10>{{data[0]}}{{data[1]}}<br> 
+<FONT FACE="Tahoma" SIZE=7 Color="#000000"
+<h2>Time: {{data[2]}}<br>Roof Temp: {{data[3]}} <br>Pool Temp:  {{data[4]}}<br> Pumpstate: {{data[5]}}<br></h2>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'index') }}';"><STRONG>CURRENT</STRONG></button>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'maxtemp') }}';"><STRONG>MAXIMUM</STRONG></button>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'mintemp') }}';"><STRONG>MINIMUM</STRONG></button>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'changeparam') }}';"><STRONG>PARAMs</STRONG></button>
+</form>
+</body>
+</html>

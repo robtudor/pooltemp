@@ -1,0 +1,1 @@
+DELETE FROM `pool_temp` WHERE `date` < DATE_SUB(NOW(), INTERVAL 1 MONTH);
