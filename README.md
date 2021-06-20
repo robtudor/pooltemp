@@ -1,5 +1,5 @@
 # pooltemp
-This project control 240V mains power so appropriate caution should be employed.
+This project controls 240V mains power so appropriate caution should be employed.
 Code for a Raspberry Pi to control a pool solar heating pump
 A Raspberry Pi Zero W controls a water pump via a relay.
 The Pi regularly, (the interval is configurable) interrogates two DS18B20 waterproof temperature sensors, 
@@ -14,7 +14,8 @@ There are two toggle switches on the unit, one is to switch between standby (pum
 the other is to manually switch the pump on.
 The automatic switching on of the pump is determined by the time of day, the date, the maximum outlet temperature,
 and the temperature difference between the two sensors. All of these parameters and the interrogation interval 
-are stored in the Maria database and are configurable. Default parameters are supplied if the database is unavailable.
+are stored in the MariaDB database and are configurable. Default parameters are supplied if the database is unavailable.
 A web accessible python script is used to access the database and provide current sensor temperatures (as at the last interrogation),
-maximum output temperatures for the day and minimum output temperatures for the day.
+maximum output temperatures for the day and minimum output temperatures for the day, additionally the pump parameters are configurable
+via the web.
 A crontab script prunes the database tables every month.
