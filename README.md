@@ -1,6 +1,6 @@
 # pooltemp
-This project controls 240V mains power so appropriate caution should be employed.
-Code for a Raspberry Pi to control a pool solar heating pump
+This project controls 240V mains power so appropriate caution should be employed.<br>
+Code for a Raspberry Pi to control a pool solar heating pump<br>
 A Raspberry Pi Zero W controls a water pump via a relay.
 The Pi regularly, (the interval is configurable) interrogates two DS18B20 waterproof temperature sensors, 
 one is located on the roof attached to the solar heating outlet pipe and the other is attached
