@@ -67,13 +67,11 @@ def update():
     dmaxpooltemp=request.form['maxpooltemp']
     if not is_number(dmaxpooltemp):
         configuration_error = True
-        print(dmaxpooltemp, "maxnum")
     else:
         dmaxpooltemp=float(dmaxpooltemp)
         if dmaxpooltemp < 20 or dmaxpooltemp > 36:
             configuration_error = True  
     dstarthour=request.form['starthour']
-    print(configuration_error, "max")
     dendhour=request.form['endhour']
     if not is_number(dstarthour) or not is_number(dendhour):
         configuration_error = True
@@ -83,8 +81,7 @@ def update():
         if dstarthour > 24 or dstarthour > dendhour:
             configuration_error = True      
         if dendhour > 24 or dendhour < 1:
-            configuration_error = True  
-    print(configuration_error)
+            configuration_error = True
     droofpooldelta=request.form['roofpooldelta']
     if not is_number(droofpooldelta):
         configuration_error = True
@@ -92,23 +89,20 @@ def update():
         droofpooldelta=float(droofpooldelta)
         if droofpooldelta > 10 or droofpooldelta < 0:
             configuration_error = True
-    print(configuration_error)    
     dsleeptime=request.form['sleeptime']
     if not is_number(dsleeptime):
         configuration_error = True
     else:
         dsleeptime=float(dsleeptime)
         if dsleeptime > 1200 or dsleeptime < 0:
-            configuration_error = True   
-    print(configuration_error)
+            configuration_error = True
     dstartmonth=request.form['startmonth']
     if not is_number(dstartmonth):
         configuration_error = True
     else:
         dstartmonth=float(dstartmonth)
         if dstartmonth > 12 or dstartmonth < 1:
-            configuration_error = True  
-    print(configuration_error)
+            configuration_error = True
     dendmonth=request.form['endmonth']
     if not is_number(dendmonth):
         configuration_error = True
@@ -130,7 +124,6 @@ def update():
         dalerttimer=float(dalerttimer)
         if dalerttimer > 43200 or dalerttimer < 0:
             configuration_error = True 
-    print(configuration_error)
     if not configuration_error:
         cursor.execute("UPDATE pooltempconfig set dmaxpooltemp='{}', dstarthour='{}', dendhour='{}',droofpooldelta='{}', dsleeptime='{}', dstartmonth='{}', dendmonth='{}', dlcdtimer='{}', dalerttimer='{}' where id='1'". format(dmaxpooltemp, dstarthour, dendhour, droofpooldelta, dsleeptime, dstartmonth, dendmonth, dlcdtimer, dalerttimer))
         conn.commit()
