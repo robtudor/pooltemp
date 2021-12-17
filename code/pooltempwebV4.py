@@ -5,8 +5,8 @@ app = Flask( __name__ )
 config = {
     'host': 'localhost',
     'port': 3306,
-    'user': 'accadm',
-    'password': 'm2qiaa1253',
+    'user': 'dbuser',
+    'password': 'dbpassword',
     'database': 'pooltemp'
 }
 @app .route( '/' )
