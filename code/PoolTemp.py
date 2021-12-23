@@ -316,7 +316,6 @@ try:
 
 except KeyboardInterrupt:
     GPIO.cleanup()
-#    lcd.clear()
+
 finally:
     GPIO.cleanup()
-#    lcd.clear()
