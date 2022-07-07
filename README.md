@@ -19,3 +19,4 @@ A web accessible python script is used to access the database and provide curren
 maximum output temperatures for the day and minimum output temperatures for the day, additionally the pump parameters are configurable
 via the web.<br>
 A crontab script prunes the database tables every month.
+Wifi is monitored every 20 seconds and is restarted if necessary.
