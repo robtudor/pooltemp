@@ -1,0 +1,61 @@
+<html>
+<head><title>Solar Configuration</title></head>
+<body>
+<FONT FACE="Tahoma" Color="#0A4CDB"Size=8>
+<p>Pool Temp Configuration</p>
+<FONT FACE="Tahoma" SIZE=4 Color="#1542ff"
+<p><strong>{{msg}}<strong></p>
+<style>
+table th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-family:sans-serif;
+    font-size:20pt;
+    color:white;
+    background-color:navy;
+    padding: 1px;            
+}
+</style>
+<table border=1>
+{%for data in data %}
+    <tr>
+        <form action = "/update" method = "POST">
+        <th>MaxTemp</th><td><input type = "text" name = "maxpooltemp" value = {{data[0]}}></td>       
+    </tr>
+    <tr>
+        <th>Start Hour</th><td><input type = "int" name = "starthour" value = {{data[1]}}></td>
+    </tr>
+    <tr>
+        <th>End Hour</th><td><input type = "text" name = "endhour" value = {{data[2]}}></td>
+    </tr>
+    <tr>
+        <th>Delta</th><td><input type = "text" name = "roofpooldelta" value = {{data[3]}}></td>
+    </tr>
+    <tr>
+        <th>Sleep Time</th><td><input type = "text" name = "sleeptime" value = {{data[4]}}></td>
+    </tr>
+    <tr>
+        <th>Start Month</th><td><input type = "text" name = "startmonth" value = {{data[5]}}></td>
+    </tr>
+    <tr>
+        <th>End Month</th><td><input type = "text" name = "endmonth" value = {{data[6]}}></td>
+    </tr>
+    <tr>
+        <th>LCD Timer</th><td><input type = "text" name = "lcdtimer" value = {{data[7]}}></td>
+    </tr>
+    <tr>
+        <th>Alert Timer</th><td><input type = "text" name = "alerttimer" value = {{data[8]}}></td>
+    </tr>
+    <tr>
+        <th></th><td><input type = "submit" value = "Update"></td>
+    </tr>   
+    {% endfor %}
+    </form>
+</table>
+<br><br>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'temps') }}';"><STRONG>CURRENT</STRONG></button>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'maxtemp') }}';"><STRONG>MAXIMUM</STRONG></button>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'mintemp') }}';"><STRONG>MINIMUM</STRONG</button>
+<button style="font-size : 20px; height:40px;width:150px" type="button" onclick="window.location.href='{{ url_for( 'logout') }}';"><STRONG>LOGOUT</STRONG</button>
+</body>
+</html>
