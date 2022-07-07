@@ -1,17 +1,17 @@
 import mariadb
 from flask import (Flask, render_template, request, redirect, session)
 app = Flask( __name__ )
-app.secret_key = 'MyUncleisSickbuttheHighwayisGreen'
+app.secret_key = 'Secret Key'
 
 config = {
     'host': 'localhost',
     'port': 3306,
-    'user': 'accadm',
-    'password': 'm2qiaa1253',
-    'database': 'pooltemp'
+    'user': 'username',
+    'password': 'password',
+    'database': 'dbname'
 }
 
-user={"username": "rob", "password": "m2qiaa"}
+user={"username": "username", "password": "password"}
 
 @app.route( "/", methods = ["POST", "GET"])
 def index():
