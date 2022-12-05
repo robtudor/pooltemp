@@ -8,7 +8,7 @@ to the inlet pipe of the pump at ground level. The sensors are connected via Cat
 15 metres long and the other is about 2 metres.<br>
 If the difference in temperature is deemed to be sufficient, the pump is turned on, otherwise it is turned off.<br>
 At the sensor interrogation interval, the outlet and inlet temperatures, together with the date and time and the
-status of the pump, either on or off, are recoded in a MariaDB database, this information
+status of the pump, either on or off, are recorded in a MariaDB database, this information
 is also displayed on a 4 line LCD located on the unit itself.<br>
 There are two toggle switches on the unit, one is to switch between standby (pump off)/ and On and
 the other is to manually switch the pump on.<br>
