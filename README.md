@@ -10,11 +10,12 @@ If the difference in temperature is deemed to be sufficient, the pump is turned 
 At the sensor interrogation interval, the outlet and inlet temperatures, together with the date and time and the
 status of the pump, either on or off, are recorded in a MariaDB database, this information
 is also displayed on a 4 line LCD located on the unit itself.<br>
+The lcd display is controlled by motion sensor, only coming on when movement is detected close by.
 There are two toggle switches on the unit, one is to switch between standby (pump off)/ and On and
 the other is to manually switch the pump on.<br>
 The automatic switching on of the pump is determined by the time of day, the date, the maximum outlet temperature,
 and the temperature difference between the two sensors.<br> All of these parameters and the interrogation interval 
-are stored in the MariaDB database and are configurable. Default parameters are supplied if the database is unavailable.<br>
+are stored in the MariaDB database and are configurable. Default parameters are supplied if the database is unavailable.<br> 
 A web accessible python script is used to access the database and provide current sensor temperatures (as at the last interrogation),
 maximum output temperatures for the day and minimum output temperatures for the day, additionally the pump parameters are configurable
 via the web.<br>
