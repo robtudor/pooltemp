@@ -10,7 +10,7 @@ If the difference in temperature is deemed to be sufficient, the pump is turned 
 At the sensor interrogation interval, the outlet and inlet temperatures, together with the date and time and the
 status of the pump, either on or off, are recorded in a MariaDB database, this information
 is also displayed on a 4 line LCD located on the unit itself.<br>
-The lcd display is controlled by motion sensor, only coming on when movement is detected close by.
+The lcd display is controlled by motion sensor, only coming on when movement is detected close by.<br>
 There are two toggle switches on the unit, one is to switch between standby (pump off)/ and On and
 the other is to manually switch the pump on.<br>
 The automatic switching on of the pump is determined by the time of day, the date, the maximum outlet temperature,
